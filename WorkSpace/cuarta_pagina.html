@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planta Física y Mantenimiento</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #fcb900, #ff4b3e, #9b59b6); /* Gradiente de amarillo, rojo y violeta */
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro con transparencia */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: #fff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            text-transform: uppercase; /* En mayúsculas */
+        }
+
+        /* Contenedor para organizar los cuadros en tres filas */
+        .row {
+            display: flex;
+            justify-content: space-evenly;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .item {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            text-align: left;
+            width: 160px; /* Reducir el tamaño de los cuadros */
+        }
+
+        .item h2 {
+            font-size: 14px; /* Reducir el tamaño de los encabezados */
+            margin-bottom: 10px;
+            text-align: center; /* Centrado del encabezado */
+        }
+
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .radio-group label {
+            margin-bottom: 5px;
+            font-size: 12px; /* Reducir el tamaño de las opciones */
+            cursor: pointer;
+        }
+
+        .radio-group input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 16px;
+            color: white;
+            background-color: #9b59b6; /* Color violeta */
+            border: 2px solid #9b59b6; /* Borde violeta */
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        button:hover {
+            background-color: white;
+            color: #9b59b6; /* Color violeta al hacer hover */
+            transform: scale(1.05); /* Efecto de animación al hacer hover */
+        }
+
+        /* Animación de ondas en el fondo */
+        @keyframes waveAnimation {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: url('https://www.transparenttextures.com/patterns/diagonal-stripes.png') repeat-x;
+            animation: waveAnimation 5s linear infinite;
+            z-index: -1;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wave"></div>
+    <div class="container">
+        <h1>Planta Física y Mantenimiento</h1>
+        
+        <!-- Fila superior con 4 cuadros -->
+        <div class="row">
+            <div class="item">
+                <h2>Contactos Eléctricos</h2>
+                <div class="radio-group">
+                    <label><input type="radio" name="contactos" value="muy_insatisfecho"> Muy insatisfecho</label>
+                    <label><input type="radio" name="contactos" value="insatisfecho"> Insatisfecho</label>
+                    <label><input type="radio" name="contactos" value="regular"> Regular</label>
+                </div>
+            </div>
+            <div class="item">
+                <h2>Sillas</h2>
+                <div class="radio-group">
+                    <label><input type="radio" name="sillas" value="muy_insatisfecho"> Muy insatisfecho</label>
+                    <label><input type="radio" name="sillas" value="insatisfecho"> Insatisfecho</label>
+                    <label><input type="radio" name="sillas" value="regular"> Regular</label>
+                </div>
+            </div>
+            <div class="item">
+                <h2>Escritorios</h2>
+                <div class="radio-group">
+                    <label><input type="radio" name="escritorios" value="muy_insatisfecho"> Muy insatisfecho</label>
+                    <label><input type="radio" name="escritorios" value="insatisfecho"> Insatisfecho</label>
+                    <label><input type="radio" name="escritorios" value="regular"> Regular</label>
+                </div>
+            </div>
+            <div class="item">
+                <h2>Infraestructura (Techo, Pared, Pisos)</h2>
+                <div class="radio-group">
+                    <label><input type="radio" name="infraestructura" value="muy_insatisfecho"> Muy insatisfecho</label>
+                    <label><input type="radio" name="infraestructura" value="insatisfecho"> Insatisfecho</label>
+                    <label><input type="radio" name="infraestructura" value="regular"> Regular</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fila intermedia con 4 cuadros -->
+        <div class="row">
+            <div class="item">
+                <h2>Persianas</h2>
+                <div class="radio-group">
+                    <label><input type="radio" name="persianas" value="muy_insatisfecho"> Muy insatisfecho</label>
+                    <label><input type="radio" name="persianas" value="insatisfecho"> Insatisfecho</label>
+                    <label><input type="radio" name="persianas" value="regular"> Regular</label>
+                </div>
+            </div>
+            <div class="item">
+                <h2>Pizarrón</h2>
+                <div class="radio-group">
+                    <label><input type="radio" name="pizarron" value="muy_insatisfecho"> Muy insatisfecho</label>
+                    <label><input type="radio" name="pizarron" value="insatisfecho"> Insatisfecho</label>
+                    <label><input type="radio" name="pizarron" value="regular"> Regular</label>
+                </div>
+            </div>
+            <div class="item">
+                <h2>Puertas y Ventanas</h2>
+                <div class="radio-group">
+                    <label><input type="radio" name="puertas_ventanas" value="muy_insatisfecho"> Muy insatisfecho</label>
+                    <label><input type="radio" name="puertas_ventanas" value="insatisfecho"> Insatisfecho</label>
+                    <label><input type="radio" name="puertas_ventanas" value="regular"> Regular</label>
+                </div>
+            </div>
+            <div class="item">
+                <h2>Iluminación</h2>
+                <div class="radio-group">
+                    <label><input type="radio" name="iluminacion" value="muy_insatisfecho"> Muy insatisfecho</label>
+                    <label><input type="radio" name="iluminacion" value="insatisfecho"> Insatisfecho</label>
+                    <label><input type="radio" name="iluminacion" value="regular"> Regular</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fila inferior con 1 cuadro -->
+        <div class="row">
+            <div class="item" style="width: 400px;">
+                <h2>Aire Acondicionado o Ventilación</h2>
+                <div class="radio-group">
+                    <label><input type="radio" name="aire_acondicionado" value="muy_insatisfecho"> Muy insatisfecho</label>
+                    <label><input type="radio" name="aire_acondicionado" value="insatisfecho"> Insatisfecho</label>
+                    <label><input type="radio" name="aire_acondicionado" value="regular"> Regular</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botón para enviar -->
+        <button type="button" onclick="window.location.href='quinta_pagina.html';">Enviar Reporte</button>
+    </div>
+</body>
+</html>
